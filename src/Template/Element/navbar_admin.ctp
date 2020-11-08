@@ -7,23 +7,14 @@ use Cake\Utility\Inflector;
 
 $controllers = [
     [
-        'Homepages',
-        'Stores',
+        'Pages',
         'Users',
     ],
     [
-        'BusinessHourExceptions',
-        'Coupons',
-        'Deliveryareas',
-        'ItemCategories',
-        'Items',
-        'Orders',
-        'ProductCategories',
         'Products',
     ],
     [
         'Reports',
-        'Reviews',
     ],
 ];
 ?>

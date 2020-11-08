@@ -4,13 +4,14 @@
  */
 
 use Cake\Utility\Inflector;
+use Cake\Core\Configure;
 
 ?>
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title><?= $this->fetch('title') ?> | Thong Thai</title>
+    <title><?= $this->fetch('title') ?> | <?= Configure::read('AdminTheme.title') ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= $this->Html->css('main'); ?>
 </head>
@@ -19,12 +20,12 @@ use Cake\Utility\Inflector;
 
 <header class="layout-header">
     <a href="/">
-        Thong Thai
+        <?= Configure::read('AdminTheme.title') ?>
     </a>
 </header>
 
 <aside class="layout-sidebar">
-    <?= $this->element('navbar') ?>
+    <?= $this->element('navbar_' . $globals['user']['role']) ?>
 </aside>
 
 <main class="layout-main">
