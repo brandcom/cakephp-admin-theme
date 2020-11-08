@@ -2,11 +2,12 @@
     "name": "jbennecker/cakephp-admin-theme",
     "description": "Minimalistic Admin Theme for CakePHP",
     "type": "cakephp-plugin",
-    "require": {
-        "cakephp/cakephp": "^3.0",
-        "php": "^7.4"
-    },
     "license": "MIT",
+    "require": {
+        "php": "^7.4",
+        "cakephp/cakephp": "^3.0",
+        "cakephp/plugin-installer": "*"
+    },
     "autoload": {
         "psr-4": {
             "AdminTheme\\": "src"
