@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.4;
+    margin: 0;
+    background: white;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0055d9;
+}
+
+hr {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 0.3rem;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+thead th {
+    text-align: center;
+    border-top: 0;
+}
+
+table > tbody > tr:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    margin: 1rem 0;
+    padding: 0;
+    border: 0;
+}
+
+fieldset + fieldset {
+    margin-top: 3rem;
+}
+
+fieldset > legend {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+label {
+    display: block;
+}
+
+div.input {
+    margin-bottom: 1rem;
+}
+
+div.input.date select,
+div.input.time select {
+    float: left;
+    width: 5rem;
+    margin-right: 0.25rem;
+}
+
+div.input.date::after,
+div.input.time::after {
+    display: block;
+    clear: both;
+    content: ' ';
+}
+
+select,
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='tel'],
+input[type='text'],
+textarea {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+div.error .form-error {
+    border-color: #dc3545;
+}
+
+div.error .error-message {
+    color: #dc3545;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.admin-add-button,
+.admin-add-button:visited,
+.admin-add-button:hover,
+button[type='submit'] {
+    font-size: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
+    border-radius: 0.25rem;
+    background: #007bff;
+}
+
+.admin-add-button {
+    margin-bottom: 3rem;
+}
+
+.layout-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    padding-left: 1rem;
+    background: black;
+}
+
+.layout-header a {
+    color: white;
+}
+
+.layout-sidebar {
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    width: 14rem;
+    height: calc(100vh - 3rem);
+    padding-top: 3rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.layout-main {
+    padding: 6rem 3rem 3rem calc(14rem + 3rem);
+}
+
+.navbar > a {
+    display: block;
+    padding: 0.2rem 0;
+}
+
+.breadcrumbs {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.breadcrumbs li + li {
+    margin-left: 0.5rem;
+}
+
+.paginator {
+    margin-top: 2rem;
+}
+
+.pagination {
+    display: flex;
+    margin: 0 0 0.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.pagination li.active a {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.paginator p {
+    margin: 0;
+}
+
+.message {
+    border: 2px solid transparent;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
