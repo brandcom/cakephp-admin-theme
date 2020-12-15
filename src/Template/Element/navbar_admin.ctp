@@ -3,20 +3,11 @@
  * @var \App\View\AppView $this
  */
 
+use Cake\Core\Configure;
 use Cake\Utility\Inflector;
 
-$controllers = [
-    [
-        'Pages',
-        'Users',
-    ],
-    [
-        'Products',
-    ],
-    [
-        'Reports',
-    ],
-];
+$controllers = Configure::read('AdminTheme.controllers');
+
 ?>
 <nav class="navbar">
     <?php
