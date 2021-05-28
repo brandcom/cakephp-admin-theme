@@ -17,7 +17,6 @@ use Cake\Core\Configure;
 </head>
 <body>
 
-
 <header class="layout-header">
     <a href="/">
         <?= Configure::read('AdminTheme.title') ?>
@@ -25,7 +24,7 @@ use Cake\Core\Configure;
 </header>
 
 <aside class="layout-sidebar">
-    <?= $this->element('navbar_' . $globals['user']['role']) ?>
+    <?= $this->element('admin-navbar') ?>
 </aside>
 
 <main class="layout-main">

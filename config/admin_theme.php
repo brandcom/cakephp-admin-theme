@@ -2,5 +2,7 @@
 
 return [
     'AdminTheme.title' => '',
-    'AdminTheme.controllers' => [],
+    'AdminTheme.controllers' => [
+        [],
+    ],
 ];

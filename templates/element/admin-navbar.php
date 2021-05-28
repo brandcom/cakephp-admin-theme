@@ -16,7 +16,7 @@ $controllers = Configure::read('AdminTheme.controllers');
             echo $this->Html->link(
                 Inflector::humanize($controller),
                 [
-                    'prefix' => 'admin',
+                    'prefix' => 'Admin',
                     'plugin' => false,
                     'controller' => $controller,
                     'action' => 'index',
