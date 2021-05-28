@@ -29,4 +29,10 @@ $controllers = Configure::read('AdminTheme.controllers');
         echo '<hr/>';
     }
     ?>
+
+    <?= $this->Html->link('Logout', [
+        'prefix' => false,
+        'controller' => 'Users',
+        'action' => 'logout',
+    ]) ?>
 </nav>
