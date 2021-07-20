@@ -14,6 +14,7 @@ use Cake\Core\Configure;
     <title><?= $this->fetch('title') ?> | <?= Configure::read('AdminTheme.title') ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= $this->Html->css('main'); ?>
+    <?= $this->fetch('css') ?>
 </head>
 <body>
 
@@ -39,5 +40,6 @@ use Cake\Core\Configure;
     <?= $this->fetch('content') ?>
 </main>
 
+    <?= $this->fetch('script') ?>
 </body>
 </html>
