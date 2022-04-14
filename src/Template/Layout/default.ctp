@@ -14,6 +14,7 @@ use Cake\Utility\Inflector;
     <title><?= $this->fetch('title') ?> | <?= Configure::read('AdminTheme.title') ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= $this->Html->css('main'); ?>
+    <?= $this->fetch('css') ?>
 </head>
 <body>
     <header class="layout-header">
@@ -24,7 +25,7 @@ use Cake\Utility\Inflector;
     </header>
 
     <aside class="layout-sidebar">
-        <?= $this->element('navbar_' . $globals['user']['role']) ?>
+        <?= $this->element('aside/navbar') ?>
     </aside>
 
     <main class="layout-main">
@@ -38,5 +39,7 @@ use Cake\Utility\Inflector;
         <h1><?= Inflector::humanize($this->request->getParam('controller')) ?></h1>
         <?= $this->fetch('content') ?>
     </main>
+
+    <?= $this->fetch('script') ?>
 </body>
 </html>
