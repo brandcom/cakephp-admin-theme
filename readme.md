@@ -30,3 +30,15 @@ if ($this->getRequest()->getParam('prefix') === 'Admin') {
     $this->viewBuilder()->setTheme('AdminTheme');
 }
 ```
+
+## ViewBlocks
+
+There are two ViewBlocks
+
+```
+<?= $this->fetch('css'); ?>
+```
+
+```
+<?= $this->fetch('script') ?>
+```
