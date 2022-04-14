@@ -12,19 +12,23 @@ $controllers = Configure::read('AdminTheme.controllers');
 <nav class="navbar">
     <?php
     foreach ($controllers as $groups) {
-        foreach ($groups as $controller) {
-            echo $this->Html->link(
-                Inflector::humanize($controller),
-                [
-                    'prefix' => 'admin',
-                    'plugin' => false,
-                    'controller' => $controller,
-                    'action' => 'index',
-                ],
-                [
-                    'class' => 'link',
-                ]
-            );
+        foreach ($groups as $title => $url) {
+            if (is_string($url)) {
+                echo $this->Html->link(
+                    Inflector::humanize($url),
+                    [
+                        'prefix' => 'admin',
+                        'plugin' => false,
+                        'controller' => $url,
+                        'action' => 'index',
+                    ],
+                    [
+                        'class' => 'link',
+                    ]
+                );
+            } else {
+                echo $this->Html->link($title, $url, ['class' => 'link']);
+            }
         }
         echo '<hr/>';
     }
