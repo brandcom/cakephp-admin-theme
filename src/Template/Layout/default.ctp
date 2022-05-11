@@ -29,6 +29,13 @@ use Cake\Utility\Inflector;
     </aside>
 
     <main class="layout-main">
+        <?php if (Configure::read('environment') == 'test'): ?>
+            <div class="alert alert-warning">
+                <strong>ACHTUNG:</strong><br>
+                Dies ist die Testumgebung!
+            </div>
+        <?php endif ?>
+
         <?= $this->Flash->render() ?>
         <?php
         $this->Breadcrumbs->add('Admin');
