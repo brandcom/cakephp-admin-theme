@@ -14,8 +14,13 @@ $controllers = Configure::read('AdminTheme.controllers');
     foreach ($controllers as $groups) {
         foreach ($groups as $title => $url) {
             if (is_string($url)) {
+
+                if (!is_string($title)) {
+                    $title = Inflector::humanize($url);
+                }
+
                 echo $this->Html->link(
-                    Inflector::humanize($url),
+                    $title,
                     [
                         'prefix' => 'admin',
                         'plugin' => false,
