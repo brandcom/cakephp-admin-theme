@@ -22,7 +22,7 @@ $controllers = Configure::read('AdminTheme.controllers');
                 echo $this->Html->link(
                     $title,
                     [
-                        'prefix' => 'admin',
+                        'prefix' => 'Admin',
                         'plugin' => false,
                         'controller' => $url,
                         'action' => 'index',
